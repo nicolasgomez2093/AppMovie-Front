@@ -38,6 +38,7 @@ const AuthProvider = ({ children }) => {
 
   const cerrarSesionAuth = () => {
     setAuth({});
+
   };
 
   return (

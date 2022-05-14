@@ -27,7 +27,7 @@ const {handleBuscador} = usePelicula()
             Buscar Pelicula
             
           </button>
-          <Link to="/" className="font-bold uppercase">
+          <Link to="/inicio/favoritos" className="font-bold uppercase">
             Favoritos
           </Link>
           <button

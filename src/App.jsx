@@ -9,6 +9,7 @@ import NuevoPassword from "./paginas/NuevoPassword";
 import OlvidePassword from "./paginas/OlvidePassword";
 import PeliculaInfo from "./paginas/PeliculaInfo";
 import Peliculas from "./paginas/Peliculas";
+import Favoritos from "./paginas/Favoritos";
 import Registrar from "./paginas/Registrar";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
 
             <Route path="/inicio/" element={<RutaProtegida />}>
               <Route index element={<Peliculas />} />
+              <Route path="favoritos" element={<Favoritos />} />
               <Route path=":id" element={<PeliculaInfo />} />
             </Route>
           </Routes>

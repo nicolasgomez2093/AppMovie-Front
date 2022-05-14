@@ -42,7 +42,7 @@ const ComentarioProvider = ({ children }) => {
   };
 
   const nuevoComentario = async (comentario) => {
-    console.log(comentario);
+
     try {
       const token = localStorage.getItem("token");
       if (!token) return;

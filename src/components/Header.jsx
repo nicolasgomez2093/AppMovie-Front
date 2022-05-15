@@ -18,7 +18,7 @@ const {handleBuscador} = usePelicula()
     <header className="px-4 py-5 bg-white border-b">
       <div className="md:flex md:justify-between">
         <h2 className="text-yellow-600 font-black text-4xl mb-5 md:mb-0 text-center cursor-pointer" onClick={() => navigate(`/inicio`)}>
-        Movie App
+        Popcorn Flix
       </h2>
 
         <div className="flex flex-col md:flex-row items-center gap-4">

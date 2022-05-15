@@ -4,7 +4,7 @@ import Banner from "../components/Banner";
 function AuthLayout() {
   return (
     <>
-      <div className="md:flex md:min-h-screen mx-auto p-5">
+      <div className="md:flex md:min-h-screen mx-auto my-auto p-5">
         <Banner />
         <div className="flex-1 p-5">
           <main className="mx-auto mt-5 md:mt-10 md:flex md:justify-center">

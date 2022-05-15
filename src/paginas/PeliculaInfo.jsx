@@ -7,41 +7,24 @@ function PeliculaInfo() {
   const { peliculaInfo } = usePelicula();
   const { comentarios } = useComentario();
 
-  const puntaje = Math.round(peliculaInfo.rating.average);
+  const puntaje = Math.round(peliculaInfo.rating?.average)
 
   return (
     <div className="items-center mx-auto p-10 px-20">
       <div className="flex justify-center">
         <img
-          src={peliculaInfo.image}
+          src={peliculaInfo.image?.original}
           alt={`Imagen de ${peliculaInfo.name}`}
           className="object-contain h-1/2 w-1/2 md:h-1/3 md:w-1/3 object-center"
         />
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-20 mt-5">
         <div></div>
-        <div className="md:flex md:justify-end">
-          {puntaje <= 2 && <i className="fas fa-star text-yellow-600"></i>}
-          {2 < puntaje <= 4 && (
-            <>
-              <i className="fas fa-star text-yellow-600"></i>
-            </>
+        <div className=" flex justify-start md:justify-end">
+          {puntaje ? (<p className="text-yellow-600 font-black text-xl text-center">{puntaje} <i className="fas fa-star text-yellow-600"></i></p>) :(
+            <p className="text-yellow-600 font-black text-xl text-center">N/D</p>
           )}
-          {4 < puntaje <= 6 && (
-            <>
-              <i className="fas fa-star text-yellow-600"></i>
-            </>
-          )}
-          {6 < puntaje <= 8 && (
-            <>
-              <i className="fas fa-star text-yellow-600"></i>
-            </>
-          )}
-          {8 < puntaje <= 10 && (
-            <>
-              <i className="fas fa-star text-yellow-600"></i>
-            </>
-          )}
+
         </div>
       </div>
 
@@ -49,7 +32,7 @@ function PeliculaInfo() {
         {peliculaInfo.name}
       </h1>
       <p className="text-white text-3xl">Lenguaje: {peliculaInfo.language}</p>
-      <p className="text-white text-3xl">Genero: {peliculaInfo.genres}</p>
+      <p className="text-white text-3xl">Genero: {peliculaInfo.genres?.[0] || 'N/D'}</p>
       <p className="text-white text-3xl">
         Fecha de estreno: {peliculaInfo.premiered}
       </p>

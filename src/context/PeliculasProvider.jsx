@@ -15,6 +15,7 @@ const PeliculasProvider = ({ children }) => {
   const [buscador, setBuscador] = useState(false);
   const [favorito, setFavorito] = useState({})
   const [favoritos, setFavoritos] = useState([])
+  const [like, setLike] = useState(true);
 
   const { auth} = useAuth();
 
@@ -149,7 +150,9 @@ const PeliculasProvider = ({ children }) => {
         buscador,
         favoritos,
         nuevoFavorito,
-        eliminarFavorito
+        eliminarFavorito,
+        setLike,
+        like
       }}
     >
       {children}

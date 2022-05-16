@@ -21,7 +21,7 @@ function PeliculaInfo() {
       <div className="grid grid-cols-2 md:grid-cols-3 gap-20 mt-5">
         <div></div>
         <div className=" flex justify-start md:justify-end">
-          {puntaje ? (<p className="text-yellow-600 font-black text-xl text-center">{puntaje} <i className="fas fa-star text-yellow-600"></i></p>) :(
+          {puntaje ? (<p className="text-yellow-600 font-black text-xl text-center">{puntaje}/10 <i className="fas fa-star text-yellow-600"></i></p>) :(
             <p className="text-yellow-600 font-black text-xl text-center">N/D</p>
           )}
 

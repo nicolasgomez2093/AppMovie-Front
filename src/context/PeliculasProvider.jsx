@@ -38,7 +38,7 @@ const PeliculasProvider = ({ children }) => {
     const obtenerPelicula = async () => {
         if(!peliculaId) return;
         try {
-            const url = `http://api.tvmaze.com/shows/${peliculaId}`;
+            const url = `https://api.tvmaze.com/shows/${peliculaId}`;
             const { data } = await axios(url);
             setPeliculaInfo(data)
         } catch (error) {

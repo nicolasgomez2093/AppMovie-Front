@@ -40,7 +40,7 @@ function PeliculaInfo() {
       <h4 className="text-yellow-600 font-black text-5xl text-center my-5">
         Sinapsis
       </h4>
-      <p className="text-white text-3xl">{peliculaInfo?.summary.replace(/<[^>]+>/g, "")}</p>
+      <p className="text-white text-3xl">{peliculaInfo?.summary?.replace(/<[^>]+>/g, "")}</p>
 
       <div className="mx-auto md:w-1/2 mt-5 md:mt-10 md:justify-center">
         <FormularioComentario id={peliculaInfo.id} />

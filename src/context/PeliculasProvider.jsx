@@ -22,7 +22,7 @@ const PeliculasProvider = ({ children }) => {
   useEffect(() => {
     const consultarAPI = async () => {
       try {
-        const url = `http://api.tvmaze.com/search/shows?q=star%20wars`;
+        const url = `https://api.tvmaze.com/search/shows?q=star%20wars`;
         const { data } = await axios(url);
         setPeliculas(data)
       } catch (error) {

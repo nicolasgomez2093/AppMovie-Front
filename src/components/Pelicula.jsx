@@ -36,7 +36,7 @@ function Pelicula({ pelicula }) {
   return (
     <div className="border p-3 shadow bg-white">
       <div className="flex justify-center">
-        <img src={image.medium} alt={`Imagen de ${name}`} />
+        <img src={image?.medium} alt={`Imagen de ${name}`} />
       </div>
       <div className="flex justify-end mr-5">
         <button

@@ -29,18 +29,18 @@ function PeliculaInfo() {
       </div>
 
       <h1 className="text-yellow-600 font-black text-5xl text-center mb-5 mt-5">
-        {peliculaInfo.name}
+        {peliculaInfo?.name}
       </h1>
       <p className="text-white text-3xl">Lenguaje: {peliculaInfo.language}</p>
       <p className="text-white text-3xl">Genero: {peliculaInfo.genres?.[0] || 'N/D'}</p>
       <p className="text-white text-3xl">
-        Fecha de estreno: {peliculaInfo.premiered}
+        Fecha de estreno: {peliculaInfo?.premiered}
       </p>
 
       <h4 className="text-yellow-600 font-black text-5xl text-center my-5">
         Sinapsis
       </h4>
-      <p className="text-white text-3xl">{peliculaInfo.summary}</p>
+      <p className="text-white text-3xl">{peliculaInfo?.summary}</p>
 
       <div className="mx-auto md:w-1/2 mt-5 md:mt-10 md:justify-center">
         <FormularioComentario id={peliculaInfo.id} />
